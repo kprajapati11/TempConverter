@@ -8,8 +8,8 @@
 <title>Results</title>
 </head>
 <body>
-	<p>${ userTemp.getTempInCelcius() } degree Celcius when converted to Farenheit is:  ${ userTemp.getComputeFar() } Fahrenheit <br />
+	<p>${ userTempFah.getTemperature() } degree Fahrenheit when converted to Celcius is:  ${ userTempFah.getComputeCel() } Celcius <br />
 	</p>
-<a href="index.jsp"> Select another temperature in Celcius</a>
+<a href="toCelcius.jsp"> Select another temperature in Fahrenheit</a>
 </body>
 </html>

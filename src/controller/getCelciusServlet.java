@@ -8,19 +8,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.CelciusToFahrenheit;
+import model.FahrenheitToCelcius;
 
 /**
- * Servlet implementation class getFarenheitServlet
+ * Servlet implementation class getCelciusServlet
  */
-@WebServlet("/getFarenheitServlet")
-public class getFarenheitServlet extends HttpServlet {
+@WebServlet("/getCelciusServlet")
+public class getCelciusServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public getFarenheitServlet() {
+    public getCelciusServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,11 +29,11 @@ public class getFarenheitServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String userCelcius = request.getParameter("userCelcius");
-		CelciusToFahrenheit userTemperature = new CelciusToFahrenheit(Double.parseDouble(userCelcius));
+		String userFarh = request.getParameter("userFarh");
+		FahrenheitToCelcius userTemperatureFah = new FahrenheitToCelcius(Double.parseDouble(userFarh));
 		
-		request.setAttribute("userTemp", userTemperature);
-		getServletContext().getRequestDispatcher("/result.jsp").forward(request, response);
+		request.setAttribute("userTempFah", userTemperatureFah);
+		getServletContext().getRequestDispatcher("/result2.jsp").forward(request, response);
 		/*
 		 * PrintWriter writer = response.getWriter();
 		 * writer.println(userTemperature.toString()); writer.close();

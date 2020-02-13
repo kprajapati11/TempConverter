@@ -7,13 +7,13 @@
 <title>Welcome to the temperature converter page!</title>
 </head>
 <body>
-<h1> Celcius to Fahrenheit Converter Page!</h1>
-<form action="getFarenheitServlet" method="post">
-Enter temperature in Celcius : 
-<input type="text" name="userCelcius" size="10">
+<h1> Fahrenheit to Celcius Converter Page!</h1>
+<form action="getCelciusServlet" method="post">
+Enter temperature in Fahrenheit : 
+<input type="text" name="userFarh" size="10">
 <input type="submit" value="Calculate Temperature"/>
 </form>
 <br><br><br><br><br><br>
-<a href="toCelcius.jsp"> Convert from Fahrenheit to Celcius</a>
+<a href="index.jsp"> Convert from Celcius to Fahrenheit</a>
 </body>
 </html>

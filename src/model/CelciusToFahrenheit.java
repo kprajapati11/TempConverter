@@ -1,14 +1,14 @@
 package model;
 
-public class TempConverter {
+public class CelciusToFahrenheit {
 	private double tempInCelcius;
 	private double computeFar;
-
-	public TempConverter() {
+	
+	public CelciusToFahrenheit() {
 		super();
 	}
 
-	public TempConverter(double tempInCelcius) {
+	public CelciusToFahrenheit(double tempInCelcius) {
 		//super();
 		this.tempInCelcius = tempInCelcius;
 		computeFar = setToFarenheit(tempInCelcius);
@@ -21,7 +21,7 @@ public class TempConverter {
 	public void setTempInCelcius(double tempInCelcius) {
 		this.tempInCelcius = tempInCelcius;
 	}
-	
+
 
 	public double getComputeFar() {
 		return computeFar;
@@ -34,11 +34,13 @@ public class TempConverter {
 
 	
 	public double setToFarenheit(double tempInCelcius) {
-		final double NINEBYFIVE = 9/5;
+		final double NINEBYFIVE = (double) 9/5;
 		final int CONS = 32;
 		double tempToFarenheit = ((tempInCelcius * NINEBYFIVE)+ CONS);
 		return tempToFarenheit;
 	}
+
+	
 
 	@Override
 	public String toString() {
